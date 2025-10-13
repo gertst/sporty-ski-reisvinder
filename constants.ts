@@ -15,7 +15,8 @@ export const TRIPS: Record<TripName, Trip> = {
       "Adembenemende uitzichten op de Matterhorn.",
       "De prachtige pistes op de gletsjers zijn ook in het voorjaar nog in uitstekende conditie.",
     ],
-    imageUrl: "https://picsum.photos/seed/cervinia/800/600",
+    imageUrl:
+      "https://res.cloudinary.com/sportyski25/image/upload/f_avif,q_auto,w_2048,h_1367/v1746040626/matterhorn-met-sporty-ski-monitor_joxxoc.jpg",
     idealFor:
       "Gezinnen met kinderen met ski-ervaring (vanaf niveau 3) die een groot, hooggelegen en veelzijdig skigebied zoeken.",
   },
@@ -31,7 +32,8 @@ export const TRIPS: Record<TripName, Trip> = {
       "'Parents Day' voor een vrije skidag voor de ouders",
       "Snowboardlessen mogelijk",
     ],
-    imageUrl: "https://picsum.photos/seed/nassfeld/800/600",
+    imageUrl:
+      "https://res.cloudinary.com/sportyski25/image/upload/f_avif,q_auto,w_2048,h_1367/v1745250796/skilift-cervinia_uilgkn.jpg",
     idealFor:
       "Gezinnen met skiërs van alle niveaus (ook beginners) die een compact, kindvriendelijk en comfortabel gebied wensen.",
   },
@@ -47,7 +49,8 @@ export const TRIPS: Record<TripName, Trip> = {
       "Rustige periode (buiten schoolvakanties)",
       "Verblijf in volpension naast de beginnerspiste",
     ],
-    imageUrl: "https://picsum.photos/seed/littlekids/800/600",
+    imageUrl:
+      "https://res.cloudinary.com/sportyski25/image/upload/f_avif,q_auto,w_2048,h_1367/v1746124551/little-kids-park_mobuzk.jpg",
     idealFor:
       "Gezinnen met zeer jonge kinderen (peuters en kleuters) die in een veilige en rustige omgeving willen leren skiën.",
   },
