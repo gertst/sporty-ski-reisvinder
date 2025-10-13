@@ -1,7 +1,7 @@
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { getResponseStatusText, getResponseStatus, getQuery, createError, appendResponseHeader } from 'file://C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/h3/dist/index.mjs';
 import { joinRelativeURL, joinURL, withoutTrailingSlash } from 'file://C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/ufo/dist/index.mjs';
-import { u as useRuntimeConfig, a as useStorage, d as defineRenderHandler, g as getRouteRules, b as useNitroApp } from './nitro.mjs';
+import { a as useRuntimeConfig, b as useStorage, d as defineRenderHandler, g as getRouteRules, u as useNitroApp } from './nitro.mjs';
 import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/unhead/dist/server.mjs';
 import { stringify, uneval } from 'file://C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/devalue/index.js';
 import { toValue, isRef } from 'file://C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/vue/index.mjs';
@@ -76,7 +76,7 @@ function publicAssetsURL(...path) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getClientManifest = () => import('../build/client.manifest.mjs').then(function (n) { return n.a; }).then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('../build/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   const spaTemplate = await import('../virtual/_virtual_spa-template.mjs').then((r) => r.template).catch(() => "").then((r) => {

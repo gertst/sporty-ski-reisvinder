@@ -1,13 +1,21 @@
-import { t as trapUnhandledNodeErrors, b as useNitroApp } from '../_/nitro.mjs';
+const client_manifest = {
+  "@vite/client": {
+    "prefetch": true,
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "isEntry": true,
+    "file": "C:/Users/gerts/Downloads/sporty-ski-reisvinder/node_modules/nuxt/dist/app/entry.js"
+  }
+};
 
-const nitroApp = useNitroApp();
-const localFetch = nitroApp.localFetch;
-const closePrerenderer = () => nitroApp.hooks.callHook("close");
-trapUnhandledNodeErrors();
-
-const client_manifest = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null
-}, Symbol.toStringTag, { value: 'Module' }));
-
-export { client_manifest as a, closePrerenderer as c, localFetch as l };
+export { client_manifest as default };
 //# sourceMappingURL=client.manifest.mjs.map

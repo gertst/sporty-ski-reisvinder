@@ -606,8 +606,8 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/sporty-ski-reisvinder/",
-    "buildId": "13505649-64f4-4b54-a2d5-4143471f62d7",
+    "baseURL": "/",
+    "buildId": "e447140c-1c39-4895-a621-d964642d8459",
     "buildAssetsDir": "_nuxt/",
     "cdnURL": ""
   },
@@ -860,7 +860,7 @@ function defaultHandler(error, event, opts) {
   const statusMessage = error.statusMessage || "Server Error";
   const url = getRequestURL(event, { xForwardedHost: true, xForwardedProto: true });
   if (statusCode === 404) {
-    const baseURL = "/sporty-ski-reisvinder/";
+    const baseURL = "/";
     if (/^\/[^/]/.test(baseURL) && !url.pathname.startsWith(baseURL)) {
       const redirectTo = `${baseURL}${url.pathname.slice(1)}${url.search}`;
       return {
@@ -1204,5 +1204,5 @@ function defineRenderHandler(render) {
   });
 }
 
-export { useStorage as a, useNitroApp as b, defineRenderHandler as d, getRouteRules as g, trapUnhandledNodeErrors as t, useRuntimeConfig as u };
+export { useRuntimeConfig as a, useStorage as b, defineRenderHandler as d, getRouteRules as g, trapUnhandledNodeErrors as t, useNitroApp as u };
 //# sourceMappingURL=nitro.mjs.map

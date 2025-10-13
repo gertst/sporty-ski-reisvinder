@@ -6,6 +6,10 @@ export default defineNuxtConfig({
 
   // Static site generation configuration
   nitro: {
+    output: {
+      dir: "docs",
+      publicDir: "docs",
+    },
     prerender: {
       routes: ["/"],
     },
@@ -14,7 +18,7 @@ export default defineNuxtConfig({
   // GitHub Pages configuration
   app: {
     baseURL:
-      process.env.NODE_ENV === "production" ? "/sporty-ski-reisvinder/" : "/",
+      process.env.DEPLOY_TARGET === "github" ? "/sporty-ski-reisvinder/" : "/",
     buildAssetsDir: "_nuxt/",
     head: {
       title: "Sporty Ski Reisvinder",
