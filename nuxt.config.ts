@@ -11,9 +11,9 @@ export default defineNuxtConfig({
     },
   },
 
-  // GitHub Pages configuration
+  // GitHub Pages configuration - relative paths
   app: {
-    baseURL: process.env.NODE_ENV === "production" ? "./" : "/",
+    baseURL: "./",
     buildAssetsDir: "_nuxt/",
     head: {
       title: "Sporty Ski Reisvinder",
@@ -38,5 +38,4 @@ export default defineNuxtConfig({
 
   // Ensure compatibility with static hosting
   ssr: false,
-  target: "static",
 });
