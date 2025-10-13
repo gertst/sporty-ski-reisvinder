@@ -13,7 +13,8 @@ export default defineNuxtConfig({
 
   // GitHub Pages configuration - relative paths
   app: {
-    baseURL: "./",
+    baseURL:
+      process.env.NODE_ENV === "production" ? "/sporty-ski-reisvinder/" : "/",
     buildAssetsDir: "_nuxt/",
     head: {
       title: "Sporty Ski Reisvinder",

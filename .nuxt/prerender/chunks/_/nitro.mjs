@@ -606,8 +606,8 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/",
-    "buildId": "7c88f23f-5ce9-4c2f-bd60-5e11c1874d2c",
+    "baseURL": "/sporty-ski-reisvinder/",
+    "buildId": "2ddab007-87c7-487d-ae36-c94f1662dedd",
     "buildAssetsDir": "_nuxt/",
     "cdnURL": ""
   },
@@ -860,7 +860,7 @@ function defaultHandler(error, event, opts) {
   const statusMessage = error.statusMessage || "Server Error";
   const url = getRequestURL(event, { xForwardedHost: true, xForwardedProto: true });
   if (statusCode === 404) {
-    const baseURL = "/./";
+    const baseURL = "/sporty-ski-reisvinder/";
     if (/^\/[^/]/.test(baseURL) && !url.pathname.startsWith(baseURL)) {
       const redirectTo = `${baseURL}${url.pathname.slice(1)}${url.search}`;
       return {
