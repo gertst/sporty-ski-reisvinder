@@ -607,7 +607,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/sporty-ski-reisvinder/",
-    "buildId": "2ddab007-87c7-487d-ae36-c94f1662dedd",
+    "buildId": "278f8e0b-4dbf-4538-b991-c3c427808340",
     "buildAssetsDir": "_nuxt/",
     "cdnURL": ""
   },

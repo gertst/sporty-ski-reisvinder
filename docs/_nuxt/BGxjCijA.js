@@ -1,0 +1,1 @@
+import{x as a,y as l,z as s,U as r}from"./BFdF-V1e.js";const o={class:"bg-black/75 min-h-screen bg-cover bg-center bg-fixed relative"},n={class:"relative"},i={__name:"default",setup(c){return(t,e)=>(l(),a("div",o,[e[0]||(e[0]=s("div",{class:"absolute inset-0 bg-slate-900/40 backdrop-blur-sm"},null,-1)),s("div",n,[r(t.$slots,"default")])]))}};export{i as default};

@@ -1,10 +1,10 @@
 const client_manifest = {
-  "_BWtlPZRa.js": {
+  "_OWpxyTUQ.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BWtlPZRa.js",
+    "file": "OWpxyTUQ.js",
     "name": "v3",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -15,7 +15,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BZR5uq_V.js",
+    "file": "BGxjCijA.js",
     "name": "default",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
@@ -28,13 +28,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Bay_K7ob.js",
+    "file": "BOsC-t0q.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_BWtlPZRa.js"
+      "_OWpxyTUQ.js"
     ],
     "css": [
       "error-404.4oxyXxx0.css"
@@ -51,13 +51,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BXBShE88.js",
+    "file": "DTAAbQJO.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_BWtlPZRa.js"
+      "_OWpxyTUQ.js"
     ],
     "css": [
       "error-500.CZqNkBuR.css"
@@ -74,7 +74,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Cy6-YXfD.js",
+    "file": "BFdF-V1e.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -98,13 +98,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DIXRmrY_.js",
+    "file": "DAnzEq36.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_BWtlPZRa.js"
+      "_OWpxyTUQ.js"
     ]
   }
 };

@@ -6,10 +6,10 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && robocopy .output\\public docs /E /PURGE",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "build:static": "nuxt generate"
+    "build:static": "nuxt generate && robocopy .output\\public docs /E /PURGE"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
