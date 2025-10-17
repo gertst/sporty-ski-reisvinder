@@ -20,11 +20,6 @@
           @input="handleChange"
           class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500"
         />
-        <div class="flex justify-between text-xs text-slate-400 mt-1">
-          <span>0</span>
-          <span>50</span>
-          <span>100</span>
-        </div>
       </div>
       <span class="text-xs text-slate-500 w-20 flex-shrink-0"> Absoluut </span>
     </div>
