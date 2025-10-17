@@ -3,12 +3,15 @@
     <!-- Compact Header -->
     <header class="text-center mb-6">
       <h1
-        class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+        class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight drop-shadow-lg"
       >
-        <span class="block">Vind de perfecte</span>
-        <span class="block text-sky-300">Sporty Ski-reis voor jouw gezin!</span>
+        <span class="block text-balance"
+          >Vind de perfecte Sporty Ski-reis voor jouw gezin!</span
+        >
       </h1>
-      <p class="mt-2 max-w-xl mx-auto text-sm sm:text-base text-slate-200">
+      <p
+        class="mt-2 max-w-xl mx-auto text-balance text-sm sm:text-base text-white/90"
+      >
         Beantwoord de stellingen en zie direct welke bestemming het beste bij
         jullie past.
       </p>
@@ -17,7 +20,9 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <!-- Statements Section -->
       <div class="lg:col-span-2 space-y-4">
-        <h2 class="text-xl font-bold text-white mb-4">Jouw voorkeuren</h2>
+        <h2 class="text-xl font-bold text-white mb-4 drop-shadow">
+          Jouw voorkeuren
+        </h2>
         <StatementSlider
           v-for="statement in STATEMENTS"
           :key="statement.id"
@@ -30,26 +35,28 @@
       <!-- Dynamic Scores Section -->
       <div class="lg:col-span-1">
         <div class="sticky top-6">
-          <h2 class="text-xl font-bold text-white mb-4">Live resultaten</h2>
+          <h2 class="text-xl font-bold text-white mb-4 drop-shadow">
+            Live resultaten
+          </h2>
 
           <!-- Dynamic Trip Scores -->
           <div class="space-y-3 mb-6">
             <div
               v-for="(trip, tripName) in TRIPS"
               :key="tripName"
-              class="bg-white/80 backdrop-blur-sm rounded-lg p-4 transition-all duration-300"
+              class="bg-white/95 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 shadow-lg border border-white/50"
               :class="{
-                'ring-2 ring-sky-400 bg-sky-50/90 scale-105':
+                'ring-2 ring-sporty-orange border-sporty-orange bg-white scale-105 shadow-xl':
                   tripName === topTrip,
-                'opacity-75': tripName !== topTrip && topTrip,
+                'opacity-85': tripName !== topTrip && topTrip,
               }"
             >
               <div class="flex justify-between items-start mb-2">
                 <h3
                   class="font-bold text-sm"
                   :class="{
-                    'text-sky-700': tripName === topTrip,
-                    'text-slate-700': tripName !== topTrip,
+                    'text-sporty-blue': tripName === topTrip,
+                    'text-gray-700': tripName !== topTrip,
                   }"
                 >
                   {{ trip.name }}
@@ -57,11 +64,11 @@
                 <span
                   class="text-xs font-mono px-2 py-1 rounded"
                   :class="{
-                    'bg-sky-200 text-sky-800': tripName === topTrip,
-                    'bg-slate-200 text-slate-600': tripName !== topTrip,
+                    'bg-sporty-orange text-white': tripName === topTrip,
+                    'bg-sporty-blue-50 text-sporty-blue': tripName !== topTrip,
                   }"
                 >
-                  <span class="text-lg font-bold text-slate-800">
+                  <span class="text-lg font-bold">
                     {{
                       Math.round(
                         Math.max(0, Math.min(100, currentScores[tripName] || 0))
@@ -70,20 +77,21 @@
                   </span>
                 </span>
               </div>
-              <div class="w-full bg-slate-200 rounded-full h-2">
+              <div
+                class="w-full bg-sporty-blue-50 rounded-full h-3 shadow-inner"
+              >
                 <div
-                  class="h-2 rounded-full transition-all duration-500 ease-out"
-                  :class="{
-                    'bg-gradient-to-r from-sky-400 to-sky-600':
-                      tripName === topTrip,
-                    'bg-slate-400': tripName !== topTrip,
-                  }"
+                  class="h-3 rounded-full transition-all duration-500 ease-out shadow-sm"
                   :style="{
                     width: `${Math.max(5, currentScores[tripName] || 0)}%`,
+                    background:
+                      tripName === topTrip
+                        ? 'linear-gradient(90deg, var(--sporty-orange-400), var(--sporty-orange-600))'
+                        : 'linear-gradient(90deg, var(--sporty-blue-100), var(--sporty-blue-500))',
                   }"
                 ></div>
               </div>
-              <p class="text-xs text-slate-600 mt-1">{{ trip.location }}</p>
+              <p class="text-xs text-gray-600 mt-1">{{ trip.location }}</p>
             </div>
           </div>
 
@@ -91,10 +99,18 @@
           <button
             v-if="!result"
             @click="calculateResult"
-            class="w-full bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:scale-105 transform transition duration-300 ease-in-out shadow-lg focus:outline-none focus:ring-4 focus:ring-sky-300"
+            class="w-full bg-gradient-to-r text-white font-bold py-3 px-4 rounded-lg hover:scale-105 transform transition duration-300 ease-in-out shadow-lg focus:outline-none focus:ring-4"
             :disabled="!hasSignificantScore"
             :class="{
               'opacity-50 cursor-not-allowed': !hasSignificantScore,
+              'bg-sporty-blue hover:bg-sporty-blue-600 ring-sporty-blue':
+                hasSignificantScore,
+              'bg-gray-400': !hasSignificantScore,
+            }"
+            :style="{
+              background: hasSignificantScore
+                ? 'linear-gradient(90deg, var(--sporty-blue-500), var(--sporty-blue-700))'
+                : undefined,
             }"
           >
             {{
@@ -108,7 +124,7 @@
           <button
             v-if="result"
             @click="handleReset"
-            class="w-full bg-slate-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-slate-600 transition duration-300"
+            class="w-full bg-sporty-orange text-white font-bold py-3 px-4 rounded-lg hover:bg-sporty-orange-600 transition duration-300 shadow-lg"
           >
             Opnieuw proberen
           </button>

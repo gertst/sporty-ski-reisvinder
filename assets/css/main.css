@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sporty Ski Brand Colors - Brighter palette */
+:root {
+  /* Primary Blues - Lighter variations */
+  --sporty-blue-25: rgb(240, 248, 255);
+  --sporty-blue-50: rgb(219, 234, 254);
+  --sporty-blue-100: rgb(147, 197, 253);
+  --sporty-blue-200: rgb(96, 165, 250);
+  --sporty-blue-300: rgb(59, 130, 246);
+  --sporty-blue-400: rgb(37, 99, 235);
+  --sporty-blue-500: rgb(27, 110, 203);
+  --sporty-blue-600: rgb(15, 91, 186);
+  --sporty-blue-700: rgb(14, 72, 150);
+  --sporty-blue-800: rgb(16, 62, 124);
+  --sporty-blue-900: rgb(19, 54, 103);
+  --sporty-blue-950: rgb(12, 34, 69);
+
+  /* Dark Navy Background */
+  --sporty-navy: rgb(14, 23, 32);
+
+  /* Orange Accents - Brighter variations */
+  --sporty-orange-200: rgb(255, 237, 213);
+  --sporty-orange-300: rgb(253, 186, 116);
+  --sporty-orange-400: rgb(251, 146, 60);
+  --sporty-orange-500: rgb(249, 115, 22);
+  --sporty-orange-600: rgb(234, 88, 12);
+
+  /* Grays */
+  --sporty-gray-50: rgb(249, 250, 251);
+  --sporty-gray-100: rgb(243, 244, 246);
+  --sporty-gray-200: rgb(229, 231, 235);
+  --sporty-gray-300: rgb(209, 213, 219);
+  --sporty-gray-400: rgb(156, 163, 175);
+  --sporty-gray-500: rgb(107, 114, 128);
+  --sporty-gray-600: rgb(75, 85, 99);
+}
+
+/* Apply Sporty Ski color scheme - Lighter version */
+body {
+  background: linear-gradient(
+    135deg,
+    var(--sporty-blue-100) 0%,
+    var(--sporty-blue-500) 100%
+  );
+  min-height: 100vh;
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
 }
@@ -15,4 +61,107 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Custom utility classes for Sporty Ski branding */
+.text-sporty-blue {
+  color: var(--sporty-blue-600);
+}
+
+.text-sporty-blue-light {
+  color: var(--sporty-blue-100);
+}
+
+.bg-sporty-blue {
+  background-color: var(--sporty-blue-500);
+}
+
+.bg-sporty-blue-50 {
+  background-color: var(--sporty-blue-50);
+}
+
+.bg-sporty-orange {
+  background-color: var(--sporty-orange-400);
+}
+
+.border-sporty-blue {
+  border-color: var(--sporty-blue-500);
+}
+
+.border-sporty-orange {
+  border-color: var(--sporty-orange-400);
+}
+
+.ring-sporty-blue {
+  --tw-ring-color: var(--sporty-blue-500);
+}
+
+.ring-sporty-orange {
+  --tw-ring-color: var(--sporty-orange-400);
+}
+
+.hover\:bg-sporty-blue-600:hover {
+  background-color: var(--sporty-blue-600);
+}
+
+.hover\:bg-sporty-orange-600:hover {
+  background-color: var(--sporty-orange-600);
+}
+
+.hover\:border-sporty-orange:hover {
+  border-color: var(--sporty-orange-400);
+}
+
+/* Custom slider styles for Sporty Ski - Brighter version */
+.slider-sporty {
+  accent-color: var(--sporty-orange-400);
+}
+
+.slider-sporty::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--sporty-orange-400),
+    var(--sporty-orange-600)
+  );
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider-sporty::-webkit-slider-track {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--sporty-blue-50),
+    var(--sporty-blue-100)
+  );
+}
+
+.slider-sporty::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--sporty-orange-400),
+    var(--sporty-orange-600)
+  );
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider-sporty::-moz-range-track {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--sporty-blue-50),
+    var(--sporty-blue-100)
+  );
 }

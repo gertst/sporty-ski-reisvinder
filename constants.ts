@@ -95,7 +95,7 @@ export const STATEMENTS: Statement[] = [
   },
   {
     id: "q7",
-    text: "Reizen buiten de drukke schoolvakanties, in een rustigere periode, heeft onze voorkeur.",
+    text: "Reizen buiten de schoolvakanties, in een rustigere periode, heeft onze voorkeur.",
     associatedTrips: [
       { trip: TripName.LittleKidsWeek, weight: 3 },
       { trip: TripName.Cervinia, weight: -0.5 },

@@ -1,6 +1,16 @@
 <template>
-  <div class="bg-black/75 min-h-screen bg-cover bg-center bg-fixed relative">
-    <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"></div>
+  <div
+    class="min-h-screen bg-cover bg-center bg-fixed relative"
+    style="
+      background: linear-gradient(
+        135deg,
+        var(--sporty-blue-600) 0%,
+        var(--sporty-blue-200) 50%,
+        var(--sporty-blue-500) 100%
+      );
+    "
+  >
+    <div class="absolute inset-0 bg-white/10"></div>
     <div class="relative">
       <slot />
     </div>
