@@ -1,25 +1,32 @@
 <template>
   <div
-    class="w-full bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg border border-white/30"
+    class="w-full bg-white/70 backdrop-blur-sm p-4 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md border border-white/30"
   >
     <label
-      class="block text-slate-800 font-semibold mb-4 text-center md:text-left text-lg"
+      class="block text-slate-800 font-semibold mb-3 text-sm md:text-base leading-tight"
     >
       {{ label }}
     </label>
-    <div class="flex items-center space-x-4">
-      <span class="text-xs text-slate-500 w-28 text-right">
-        Helemaal niet van toepassing
+    <div class="flex items-center space-x-3">
+      <span class="text-xs text-slate-500 w-20 text-right flex-shrink-0">
+        Niet
       </span>
-      <input
-        type="range"
-        min="0"
-        max="100"
-        :value="value"
-        @input="handleChange"
-        class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500"
-      />
-      <span class="text-xs text-slate-500 w-28"> Absoluut van toepassing </span>
+      <div class="flex-1 relative">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          :value="value"
+          @input="handleChange"
+          class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500"
+        />
+        <div class="flex justify-between text-xs text-slate-400 mt-1">
+          <span>0</span>
+          <span>50</span>
+          <span>100</span>
+        </div>
+      </div>
+      <span class="text-xs text-slate-500 w-20 flex-shrink-0"> Absoluut </span>
     </div>
   </div>
 </template>

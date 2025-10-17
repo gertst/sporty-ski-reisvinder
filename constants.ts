@@ -63,20 +63,13 @@ export const STATEMENTS: Statement[] = [
     associatedTrips: [
       { trip: TripName.LittleKidsWeek, weight: 3 },
       { trip: TripName.Nassfeld, weight: 1.5 },
+      { trip: TripName.Cervinia, weight: -2 },
     ],
   },
   {
     id: "q2",
     text: "Topsneeuw, zelfs laat in het seizoen, is voor ons een belangrijke factor.",
     associatedTrips: [{ trip: TripName.Cervinia, weight: 3 }],
-  },
-  {
-    id: "q3",
-    text: "Ons gezin heeft al enige ski-ervaring en we kijken uit naar een gevarieerd skigebied.",
-    associatedTrips: [
-      { trip: TripName.Cervinia, weight: 2.5 },
-      { trip: TripName.Nassfeld, weight: 1 },
-    ],
   },
   {
     id: "q4",
@@ -94,16 +87,19 @@ export const STATEMENTS: Statement[] = [
   {
     id: "q6",
     text: "Unieke avonturen zoals een rit in een pistebully of sneeuwscootertocht maken de vakantie compleet.",
-    associatedTrips: [{ trip: TripName.Cervinia, weight: 2.5 }],
+    associatedTrips: [
+      { trip: TripName.Cervinia, weight: 2.5 },
+      { trip: TripName.LittleKidsWeek, weight: -0.5 },
+      { trip: TripName.Nassfeld, weight: -0.5 },
+    ],
   },
   {
     id: "q7",
     text: "Reizen buiten de drukke schoolvakanties, in een rustigere periode, heeft onze voorkeur.",
-    associatedTrips: [{ trip: TripName.LittleKidsWeek, weight: 3 }],
-  },
-  {
-    id: "q8",
-    text: "Een gezellige, sociale sfeer en de mogelijkheid om te snowboarden zijn belangrijke pluspunten voor ons.",
-    associatedTrips: [{ trip: TripName.Nassfeld, weight: 3 }],
+    associatedTrips: [
+      { trip: TripName.LittleKidsWeek, weight: 3 },
+      { trip: TripName.Cervinia, weight: -0.5 },
+      { trip: TripName.Nassfeld, weight: -0.5 },
+    ],
   },
 ];
